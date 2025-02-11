@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Website</title>
+<style>
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F4F4F4;
+    text-align: center;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1E1CD1;
+    padding: 15px;
+    color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Hero Section with Background Image */
+#hero {
+    background: url(/rnhs.jpeg) no-repeat center center/cover;
+    color: white;
+    padding: 150px 20px;
+}
+
+#hero h1 {
+    font-size: 3em;
+}
+
+/* Contact Us Section */
+#contact {
+    padding: 50px;
+    background-color: #FFFFFF;
+}
+
+#contact h2 {
+    color: #000000;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact form label {
+    margin-top: 10px;
+}
+
+#contact form input, #contact form textarea {
+    width: 80%;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+#contact form button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#contact form button:hover {
+    background-color: #555;
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a img {
+    width: 40px;
+    margin: 10px;
+}
+</style>
+
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="/logo.jpg" alt="School Logo" class="logo">
+            </div>
+            <ul>
+                <li><a href="NATIONAL.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="strand.html">Strand</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="sign up.html">sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Background Image -->
+    <section id="hero">
+        <h1>About us</h1>
+    </section>
+       <section id="contact">
+         <h2>office</h2>
+        <p>Coloma St. ,Don Antonio Village</p>
+        <p>Rosales, Pangasinan</p>
+        <p>Region I, Philippines</p>
+        <p>rosalesnhsshs@gmail.com</p>
+        <form action="send_message.php" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required></textarea><br>
+
+            <button type="submit">Send Message</button>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><img src="/fb.png" alt="Facebook"></a>
+            <a href="https://twitter.com" target="_blank"><img src="twitter.png" alt="Twitter"></a>
+            <a href="https://m.me/" target="_blank"><img src="/message.jpeg" alt="Message"></a>
+            <a href="https://google.com" target="_blank"><img src="google.png" alt="Google"></a>
+        </div>
+    </section>
+
+</body>
+</html>

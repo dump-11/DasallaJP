@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign up</title>
+    <script>
+        function showForm(formType) {
+            document.getElementById("login-form").style.display = formType === "login" ? "block" : "none";
+            document.getElementById("signup-form").style.display = formType === "signup" ? "block" : "none";
+        }
+    </script>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(/rnhs.jpeg);
+}
+
+.container {
+    background-color: #1ED3D3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 320px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.input-box {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-box .icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #2575FC;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1A5ECB;
+}
+
+p {
+    margin-top: 10px;
+}
+
+a {
+    color: #2575FC;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+</style>
+
+    <div class="container">
+        <div id="login-form">
+            <h2>login</h2>
+            <form>
+                <div class="input-box">
+                    <i class="icon">&#128100;</i>
+                    <input type="text" placeholder="Username" required>
+                </div>
+                <div class="input-box">
+                    <i class="icon">&#128274;</i>
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button type="submit">login</button>
+                <p>Don't have an account? <a href="#" onclick="showForm('signup')">Sign Up</a></p>
+            </form>
+        </div>
+
+        <div id="signup-form" style="display: none;">
+            <h2>Sign Up</h2>
+            <form>
+                <div class="input-box">
+                    <i class="icon">&#128100;</i>
+                    <input type="text" placeholder="Username" required>
+                </div>
+                <div class="input-box">
+                    <i class="icon">&#128231;</i>
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="input-box">
+                    <i class="icon">&#128274;</i>
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <div class="input-box">
+                    <i class="icon">&#127874;</i>
+                    <input type="date" placeholder="Birthday" required>
+                </div>
+                <div class="input-box">
+                    <i class="icon">&#127968;</i>
+                    <input type="text" placeholder="City Address" required>
+                </div>
+                <button type="submit">Sign Up</button>
+                <p>Already have an account? <a href="#" onclick="showForm('login')">login</a></p>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
