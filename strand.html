@@ -3,258 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strands and Facilities</title>
+    <title>School Website</title>
 <style>
-* {
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #F4F4F4;
-    color: #333;
+    background-color: #D3ECE2;
     text-align: center;
 }
 
-header {
-    background-color: #1E1CD1;
-    color: white;
-    padding: 15px;
+nav {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    background: #2654C5;
+    padding: 15px;
+    color: white;
 }
 
-.logo img {
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
     width: 50px;
-    height: auto;
+    height: 50px;
+    margin-right: 10px;
 }
 
 nav ul {
     list-style: none;
-    padding: 0;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
-    font-size: 18px;
-}
-
-.hero {
-    background: url(/rnhs.jpeg) no-repeat center center/cover;
     color: white;
-    padding: 200px 20px;
 }
 
-.hero h2 {
-    font-size: 2.5rem;
+#hero {
+    background: url('/pagcor building.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 150px 20px;
 }
 
-.hero p {
-    font-size: 1.2rem;
+#hero h1 {
+    font-size: 3em;
 }
 
-.strands {
-    padding: 40px 20px;
-    background-color: white;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
 }
 
-.strand-gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.strand {
-    width: 250px;
-    margin: 20px;
-    text-align: left;
-}
-
-.strand img {
-    width: 80%;
-    height: 200px;
-    object-fit: cover;
+.strand, .facility {
+    background: white;
+    padding: 10px;
     border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.strand h3 {
-    font-size: 1.5rem;
-    margin-top: 10px;
-}
-
-.strand p {
-    font-size: 1.1rem;
-    margin-top: 5px;
+.strand img, .facility img {
+    width: 100%;
+    border-radius: 5px;
 }
 
 .learn-more {
-    background-color: #004080;
+    padding: 10px 20px;
+    background-color: #333;
     color: white;
     border: none;
-    padding: 10px;
-    margin-top: 10px;
     cursor: pointer;
+    margin-top: 20px;
 }
 
 .learn-more:hover {
-    background-color: #002060;
+    background-color: #555;
 }
 
-.facilities {
-    padding: 40px 20px;
-    background-color: #e0e0e0;
+#contact {
+    padding: 50px;
+    background-color: #f0f0f0;
 }
 
-.facilities-gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+#contact h2 {
+    color: #333;
 }
 
-.facility {
-    width: 250px;
-    margin: 20px;
-    text-align: center;
-}
-
-.facility img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.facility p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-}
 .social-icons {
-    margin-top: 30px
+    margin-top: 20px;
 }
 
 .social-icons a img {
     width: 40px;
     margin: 10px;
-    
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .strand-gallery, .facilities-gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .strand, .facility {
-        width: 80%;
-    }
-
-    .hero {
-        padding: 60px 20px;
-    }
 }
 </style>
 
     <header>
-        <div class="logo">
-            <img src="/logo.jpg" alt="School Logo">
-        </div>
         <nav>
+            <div class="logo-container">
+                <img src="/logo.jpg" alt="School Logo" class="logo">ROSALES NATIONAL HIGH SCHOOL 
+            </div>
             <ul>
                 <li><a href="NATIONAL.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="#strand">Strand</a></li>
+                <li><a href="#strands">Strands</a></li>
+                
                 <li><a href="contact.html">Contact</a></li>
-                <li><a href="sign up.html">sign up</a></li>
+                <li><a href="sign up.html">Sign up</a></li>
             </ul>
         </nav>
     </header>
-
-    <section id="home" class="hero">
-        <h2>STRANDS TRACK</h2>
+    
+    <section id="hero">
+        <h1>STRANDS</h1>
     </section>
 
-    <section id="strands" class="strands">
-        <h2>STRAND TRACK</h2>
-        <div class="strand-gallery">
-            <div class="strand">
-                <img src="/stem strand.jpg" alt="STEM">
-                <h3>Science, Technology, Engineering, and Mathematics</h3>
-                <button class="learn-more" onclick="toggleDescription('stem')">Learn More</button>
-                <p id="stem" class="extra-info" style="display:none;">The STEM (Science, Technology, Engineering, and Mathematics) strand in our Academic Track is tailored for students passionate about science and technology. This program prepares them for future careers in fields such as engineering, computer science, biology, and physics.</p>
-            </div>
-            <div class="strand">
-                <img src="/abm strand.png" alt="ABM">
-                <h3>General Academic Strand</h3>
-                <button class="learn-more" onclick="toggleDescription('abm')">Learn More</button>
-                <p id="abm" class="extra-info" style="display:none;">The GAS (General Academic Strand) strand in our Academic Track offers a flexible and well-rounded educational experience for students exploring diverse fields. It provides a comprehensive foundation for those who have not yet decided on a specific career path, offering a broad range of knowledge and skills applicable to various fields of study in higher education.</p>
-            </div>
-            <div class="strand">
-                <img src="/humss strand.jpg" alt="HUMSS">
-                <h3>Humanities and Social Sciences</h3>
-                <button class="learn-more" onclick="toggleDescription('humss')">Learn More</button>
-                <p id="humss" class="extra-info" style="display:none;">The HUMSS (Humanities and Social Sciences) strand in our Academic Track is tailored for students who love literature, social studies, and the arts. This program fosters critical thinking through engaging coursework in history, psychology, and literature. Ideal for those passionate about journalism, education, or the arts.</p>
-            </div>
-            <div class="strand">
-                <img src="/gas strand.jpg" alt="GAS">
-                <h3>General Academic Strand</h3>
-                <button class="learn-more" onclick="toggleDescription('gas')">Learn More</button>
-                <p id="gas" class="extra-info" style="display:none;">The GAS (General Academic Strand) strand in our Academic Track offers a flexible and well-rounded educational experience for students exploring diverse fields. It provides a comprehensive foundation for those who have not yet decided on a specific career path, offering a broad range of knowledge and skills applicable to various fields of study in higher education.</p>
-            </div>
-            <div class="strand">
-                <img src="/tvl strand.jpg" alt="TVl">
-                <h3>TVL (Technical-Vocational-Livelihood) Track</h3>
-                <button class="learn-more" onclick="toggleDescription('ict')">Learn More</button>
-                <p id="ict" class="extra-info" style="display:none;">The TVL Track in our academic program is designed for students with a practical and hands-on approach to learning. This track prepares students for various technical, vocational, and livelihood opportunities. Within the TVL Track, students can specialize in areas such as Home Economics, delving into practical life skills; ICT (Information and Communication Technology), focusing on digital proficiency; and SMAW (Shielded Metal Arc Welding), providing expertise in welding techniques.</p>
-            </div>
+    <section id="strands">
+        <h2>STRANDS WE OFFER</h2>
+        <p>We are thrilled to introduce you to the exciting opportunities and unique educational pathway offered within our program. Our strand is specifically designed to provide students with a focused and specialized learning experience, tailored to their interests and future career goals.</p>
+        <div class="grid">
+            <div class="strand"><img src="/stem strand.jpg" alt="Strand 1"><h1>Science, Technology, Engineering, and Mathematics</h1><p>The STEM (Science, Technology, Engineering, and Mathematics) strand in our Academic Track is tailored for students passionate about science and technology. This program prepares them for future careers in fields such as engineering, computer science, biology, and physics.</p></div>
+            <div class="strand"><img src="/abm strand.png" alt="Strand 2"><h1>Accountancy, Business & Management (ABM)</h1><p>The ABM (Accounting and Business Management) strand in our Academic Track is tailored for students interested in the world of finance, business, and management. Ideal for those aspiring to pursue careers in accounting, business administration, or management, the ABM strand provides a solid foundation for success in the dynamic world of commerce.</p></div>
+            <div class="strand"><img src="/humss strand.jpg" alt="Strand 3"><h1>Humanities & Social Sciences (HUMSS)</h1><p>The HUMSS (Humanities and Social Sciences) strand in our Academic Track is tailored for students who love literature, social studies, and the arts. This program fosters critical thinking through engaging coursework in history, psychology, and literature. Ideal for those passionate about journalism, education, or the arts.</p></div>
+            <div class="strand"><img src="/gasstrand.jpg" alt="Strand 4"><h1>General Academic Strand</h1><p>The GAS (General Academic Strand) strand in our Academic Track offers a flexible and well-rounded educational experience for students exploring diverse fields. It provides a comprehensive foundation for those who have not yet decided on a specific career path, offering a broad range of knowledge and skills applicable to various fields of study in higher education.</p></div>
+            <div class="strand"><img src="/tvl strand.jpg" alt="Strand 5"><h1>Technical-Vocational-Livelihood (TVL)</h1><p>The TVL Track in our academic program is designed for students with a practical and hands-on approach to learning. This track prepares students for various technical, vocational, and livelihood opportunities. Within the TVL Track, students can specialize in areas such as Home Economics, delving into practical life skills; ICT (Information and Communication Technology), focusing on digital proficiency; and SMAW (Shielded Metal Arc Welding), providing expertise in welding techniques.</p></div>
         </div>
     </section>
 
-    <section id="facilities" class="facilities">
-        <h2>SCHOOL FACILITIES</h2>
-        <div class="facilities-gallery">
-            <div class="facility">
-                <img src="/gym.jpg" alt="GYM">
-                <p>GYM</p>
-            </div>
-            <div class="facility">
-                <img src="/IMG.jpg" alt="GUIDANCE & LIBRARY">
-                <p>GUIDANCE & LIBRARY</p>
-            </div>
-            <div class="facility">
-                <img src="/junior.jpg" alt="JUNIOR HIGH">
-                <p>JUNIOR HIGH</p>
-            </div>
-            <div class="facility">
-                <img src="/stem.jpg" alt="STEM BUILDING">
-                <p>STEM BUILDING</p>
-            </div>
-            <div class="facility">
-                <img src="/pagcor.jpg" alt="PARCOR">
-                <p>PARCOR BUILDING</p>
-            </div>
-            
+    <section id="facilities">
+        <h2>Our Facilities</h2>
+        <div class="grid">
+            <div class="facility"><img src="/guidance office.jpg" alt="Facility 1"> <h2>GUIDANCE OFFICE</h2> </div>
+            <div class="facility"><img src="/stem building.jpg" alt="Facility 2"><h2>STEM BUILDING</h2></div>
+            <div class="facility"><img src="/Abm building.jpg" alt="Facility 3"><h2>ABM BUILDING</h2></div>
+            <div class="facility"><img src="/gym.jpg" alt="Facility 4"><h2>GYM</h2></div>
+            <div class="facility"><img src="/canteen.jpg" alt="Facility 5"><h2>CANTEEN</h2></div>
+            <div class="facility"><img src="/junior high.jpg" alt="Facility 6"><h2>JUNIOR HIGH BUILDING</h2></p></div>
+            <div class="facility"><img src="/primicias.jpg" alt="Facility 7"><h2>PRIMICIAS BUILDING</h2></div>
+            <div class="facility"><img src="/park.jpg" alt="Facility"><h2>MINI PARK</h2></div>
+        </div>
+        <button class="learn-more">Learn More</button>
+    </section>
+    <section id="guide">
+        <h2>CORE VALUES<h2/>
+        <h1>MAKA-DIYOS</h1>
+        <h1>MAKATAO</h1>
+        <h1>MAKAKALIKASAN</h1>
+        <h1>MAKABANSA</h1>
+    </section>
+
     <section id="contact">
-         <h2>office</h2>
+        <h2>office</h2>
         <p>Coloma St. ,Don Antonio Village</p>
         <p>Rosales, Pangasinan</p>
         <p>Region I, Philippines</p>
-        <p>rosalesnhsshs@gmail.com</p> 
-        </section>
-            
-       
-      <section>
+        <p>rosalesnhsshs@gmail.com</p>
+    </section>
         <div class="social-icons">
             <a href="https://facebook.com" target="_blank"><img src="/fb.png" alt="Facebook"></a>
             <a href="https://twitter.com" target="_blank"><img src="twitter.png" alt="Twitter"></a>
@@ -262,20 +176,7 @@ nav ul li a {
             <a href="https://google.com" target="_blank"><img src="google.png" alt="Google"></a>
         </div>
     </section>
-        </div>
     </section>
-
-    <script>
-        function toggleDescription(strand) {
-            var element = document.getElementById(strand);
-            element.style.display = (element.style.display === "none") ? "block" : "none";
-        }
-
-        function toggleFacilityDescription(facility) {
-            var element = document.getElementById(facility);
-            element.style.display = (element.style.display === "none") ? "block" : "none";
-        }
-    </script>
 
 </body>
 </html>

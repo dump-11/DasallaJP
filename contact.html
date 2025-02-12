@@ -5,21 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Website</title>
 <style>
-/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F4F4F4;
+    background-color: #D3ECE2;
     text-align: center;
 }
 
-/* Navigation Bar */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #1E1CD1;
+    background: #2654C5;
     padding: 15px;
     color: white;
 }
@@ -49,9 +47,8 @@ nav ul li a {
     color: white;
 }
 
-/* Hero Section with Background Image */
 #hero {
-    background: url(/rnhs.jpeg) no-repeat center center/cover;
+    background: url('/stem building.jpg') no-repeat center center/cover;
     color: white;
     padding: 150px 20px;
 }
@@ -60,14 +57,13 @@ nav ul li a {
     font-size: 3em;
 }
 
-/* Contact Us Section */
 #contact {
     padding: 50px;
-    background-color: #FFFFFF;
+    background-color: #EBE7E7;
 }
 
 #contact h2 {
-    color: #000000;
+    color: #814747;
 }
 
 #contact form {
@@ -98,7 +94,6 @@ nav ul li a {
     background-color: #555;
 }
 
-/* Social Icons */
 .social-icons {
     margin-top: 20px;
 }
@@ -112,7 +107,7 @@ nav ul li a {
     <header>
         <nav>
             <div class="logo-container">
-                <img src="/logo.jpg" alt="School Logo" class="logo">
+                <img src="/logo.jpg" alt="School Logo" class="logo">ROSALES NATIONAL HIGH SCHOOL 
             </div>
             <ul>
                 <li><a href="NATIONAL.html">Home</a></li>
@@ -124,16 +119,17 @@ nav ul li a {
         </nav>
     </header>
 
-    <!-- Hero Section with Background Image -->
     <section id="hero">
         <h1>About us</h1>
     </section>
-       <section id="contact">
+             </section>
+     <section id="contact">
          <h2>office</h2>
         <p>Coloma St. ,Don Antonio Village</p>
         <p>Rosales, Pangasinan</p>
         <p>Region I, Philippines</p>
         <p>rosalesnhsshs@gmail.com</p>
+    <section>
         <form action="send_message.php" method="POST">
             <label for="name">Your Name:</label>
             <input type="text" id="name" name="name" required><br>
@@ -143,8 +139,8 @@ nav ul li a {
 
             <label for="message">Your Message:</label>
             <textarea id="message" name="message" required></textarea><br>
-
             <button type="submit">Send Message</button>
+        </section>
         <div class="social-icons">
             <a href="https://facebook.com" target="_blank"><img src="/fb.png" alt="Facebook"></a>
             <a href="https://twitter.com" target="_blank"><img src="twitter.png" alt="Twitter"></a>
