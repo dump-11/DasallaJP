@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+/* styles.css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('/guidance office.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.55);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.input-group i {
+    margin-right: 10px;
+}
+
+input {
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.social-login {
+    margin-top: 10px;
+}
+
+.social-btn {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin: 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    color: #555;
+    text-align: center;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.social-btn:hover {
+    background-color: #ccc;
+}
+
+.toggle-link {
+    margin-top: 15px;
+}
+
+.toggle-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.toggle-link a:hover {
+    text-decoration: underline;
+}
+</style>
+    <div class="container">
+        <form id="login-form" action="rosales website.html" method="post" onsubmit="return validateLogin()">
+            <h2>Login</h2>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="login-email" name="email" placeholder="Email" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="login-password" name="password" placeholder="Password" required>
+            </div>
+            <button type="submit">Login</button>
+            <div class="social-login">
+                <p>Or login with:</p>
+                <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-btn"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="toggle-link">Don't have an account? <a href="#" onclick="showRegister()">Register here</a></p>
+        </form>
+    </div>
+
+    <script src="log in form.js"></script>
+</body>
+</html>

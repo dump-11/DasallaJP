@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>lala</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url('/junior high.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    flex-direction: column;
+}
+
+.form-box {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a img {
+    width: 40px;
+    margin: 10px;
+}
+
+p {
+    text-align: center;
+    font-size: 14px;
+}
+
+p a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+    
+#register-box {
+    display: none;
+}
+</style>
+    <div class="form-container">
+        <div class="form-box" id="login-box">
+            <h2>Login</h2>
+            <form id="login-form" action="#" method="POST">
+                <input type="text" placeholder="User ID" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+             <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><img src="/fb.png" alt="Facebook"></a>
+            <a href="https://twitter.com" target="_blank"><img src="/twitter.png" alt="Twitter"></a>
+            <a href="https://m.me/" target="_blank"><img src="/message.jpeg" alt="Message"></a>
+            <a href="https://google.com" target="_blank"><img src="/google.png" alt="Google"></a>
+        </div>     
+            <p>Don't have an account? <a href="#" id="show-register">Register</a></p>
+        </div>
+
+        <div class="form-box" id="register-box" style="display: none;">
+            <h2>Register</h2>
+            <form id="register-form" action="#" method="POST">
+                <input type="text" placeholder="User ID" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit">Register</button>
+            </form>
+                         <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><img src="/fb.png" alt="Facebook"></a>
+            <a href="https://twitter.com" target="_blank"><img src="/twitter.png" alt="Twitter"></a>
+            <a href="https://m.me/" target="_blank"><img src="/message.jpeg" alt="Message"></a>
+            <a href="https://google.com" target="_blank"><img src="/google.png" alt="Google"></a>
+        </div>
+            <p>Already have an account? <a href="#" id="show-login">Login</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('show-register').addEventListener('click', function() {
+            document.getElementById('login-box').style.display = 'none';
+            document.getElementById('register-box').style.display = 'block';
+        });
+
+        document.getElementById('show-login').addEventListener('click', function() {
+            document.getElementById('register-box').style.display = 'none';
+            document.getElementById('login-box').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
